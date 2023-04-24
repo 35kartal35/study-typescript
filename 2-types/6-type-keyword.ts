@@ -99,4 +99,20 @@ const vosvos_1: vosvos = {
     nickname: "halo"
 };
 
-console.log(vosvos_1)
+type Lesson = {
+    id: number,
+    name: string,
+    content: string,
+    total_session: number,
+    teacher: User,
+};
+
+type UdemigClass = {
+    name: string;
+    student: User[];
+    teacher: User[];
+    current_teacher: User;
+    seazon: number;
+    lessons: Lesson[],
+    is_requared: boolean;
+}
