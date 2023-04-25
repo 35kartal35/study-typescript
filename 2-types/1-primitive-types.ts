@@ -6,8 +6,8 @@
 let firsname: string = "mehmet";
 
 
-firsname = "devrim";
-lastname = "tarhan";
+firsname: "devrim";
+lastname1: "tarhan";
 //number örnekleri
 let birt_year: number = 1998
 birt_year = 1995;

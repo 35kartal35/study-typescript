@@ -48,3 +48,4 @@ const çarpmaOperation: DoubleParametreMathOperationType = (
 
 console.log("sum operation", sunOperation(10, 20));
 console.log("subtrac: ", subtractOperation(10, 20));
+
