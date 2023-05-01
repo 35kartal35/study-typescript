@@ -2,21 +2,21 @@ let total: number;
 /**
  * Typescript' te fonksiyon tanımlamak için 3 yöntem kullanılır. 1. function keywordü,
  * 2. arrow function,
- * 3. single line arrow function 
- * 
+ * 3. single line arrow function
+ *
  */
 //1. yöntem: function keywordü ile
 function sum(num1: number, num2: number): number {
-    return num1 + num2;
+	return num1 + num2;
 }
 
-total = sum(10, 20)
-console.log("1. total: ", total)
+total = sum(10, 20);
+console.log("1. total: ", total);
 
 //2. yöntem: arrow function tanımlamak
 
 const add = (num1: number, num2: number): number => {
-    return num1 + num2;
+	return num1 + num2;
 };
 total = add(20, 30);
 console.log("2. total: ", total);
