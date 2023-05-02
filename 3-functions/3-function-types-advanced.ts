@@ -244,3 +244,15 @@ ornek_degisken = true;
 type UseStateFunctionType = (
 	data?: undefined | any,
 ) => [any, (param1: any | SetterCurrentStateFuncType) => void];
+
+//dış fonksiyondan bir tuple değer döner. tuple değerleri hatırlayalım
+
+type ExampleTupleType = [number, string, object, boolean, () => void];
+
+//iç fonksiyon prototip type'ı
+
+type SetterCurrentStateFuncType = (currentState: undefined | any) => any;
+
+// reactjs nin state'leri sakladığı değişken bu olsun
+
+const reactjs_states: any[] = [];
