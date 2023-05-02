@@ -256,3 +256,33 @@ type SetterCurrentStateFuncType = (currentState: undefined | any) => any;
 // reactjs nin state'leri sakladığı değişken bu olsun
 
 const reactjs_states: any[] = [];
+
+const useState: UseStateFunctionType = (data?: undefined | any) => {
+	console.log("useState hook'u çağırıldı, ilk değer:", data);
+	const current_index = reactjs_states.length;
+	reactjs_states.push(data);
+
+	console.log("***********************************");
+	return [
+		data,
+		(param: any | SetterCurrentStateFuncType): void => {
+			console.log("reactjs_states: ", reactjs_states);
+			if (typeof param === "function") {
+				console.log("Setter fonksiyon gönderilmiş.");
+				reactjs_states[current_index] = param(reactjs_states[current_index]);
+			} else {
+				console.log("setter fonksiyonuna değer gönderilmiş");
+				reactjs_states[current_index] = param;
+			}
+			console.log("reactjs_states", reactjs_states);
+			console.log("--------------------------");
+		},
+	];
+};
+
+//const [counter, setCounter] = useState();
+
+const [counter, setCounter] = useState(-1);
+
+setCounter(counter + 1);
+setCounter(counter + 3);
