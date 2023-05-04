@@ -209,10 +209,10 @@ const dispatch3 = useDispatch();
 
 dispatch1({
 	type: "set_user",
-	payload: { id: 1, firstname: "mehmet özdemir" },
+	payload: { id: 1, firstname: "mehmet özdemir", lastname: "kral" },
 });
 
-console.log(">>STORE:", store);
+console.log(">>STORE set_user:", store);
 
 const ahmet = useDispatch();
 ahmet({
