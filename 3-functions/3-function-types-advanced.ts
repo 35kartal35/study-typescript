@@ -283,6 +283,27 @@ const useState: UseStateFunctionType = (data?: undefined | any) => {
 //const [counter, setCounter] = useState();
 
 const [counter, setCounter] = useState(-1);
+const [student, setStudent] = useState({
+	id: 1,
+	firstname: "memiş",
+});
 
 setCounter(counter + 1);
 setCounter(counter + 3);
+
+setCounter((currentState: number) => {
+	console.log("ffffff", currentState);
+	return currentState + 1;
+});
+
+setStudent({
+	id: 2,
+	firstname: "örnej",
+});
+setStudent((currentState: number) => {
+	console.log("setStudent", currentState);
+	return {
+		currentState,
+		firstname: "ornek_degisken 2",
+	};
+});
