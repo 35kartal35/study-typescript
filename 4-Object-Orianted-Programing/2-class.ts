@@ -1,8 +1,8 @@
-class HandCrancType {
-	//özellikler yani propertyler classın en üst kısmında yer alır...
-	wheel_count;
-	color;
-	engine_power;
-	fuel_type;
-	model;
+class Person {
+	name: string;
 }
+
+const person = new Person();
+person.name = "Jane";
+
+console.log(person);
